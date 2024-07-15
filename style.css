@@ -324,3 +324,76 @@ ul {
     margin-bottom: 20px;
   }
 }
+
+/* Adjustments for compatibility with Bootstrap */
+.container {
+    width: 100%; /* Remove fixed width to allow Bootstrap to manage responsiveness */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .main-nav {
+    height: auto; /* Adjust height as needed */
+    padding: 10px 0; /* Adjust padding */
+  }
+  
+  .main-nav .logo {
+    max-width: 100%; /* Ensure logo scales properly */
+  }
+  
+  .main-nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .main-nav ul li {
+    padding: 10px 15px; /* Adjust padding */
+  }
+  
+  .home-cards {
+    grid-gap: 15px; /* Adjust grid gap */
+  }
+  
+  .xbox, .carbon {
+    height: auto; /* Adjust height */
+  }
+  
+  .links .links-inner {
+    grid-gap: 15px; /* Adjust grid gap */
+  }
+  
+  /* Media Queries for Bootstrap */
+  @media (min-width: 576px) {
+    .home-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  
+    .links .links-inner {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .home-cards {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    }
+  
+    .links .links-inner {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .home-cards {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on extra large screens */
+    }
+  
+    .links .links-inner {
+      grid-template-columns: repeat(6, 1fr); /* 6 columns on extra large screens */
+    }
+  }
+  
